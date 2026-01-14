@@ -4,7 +4,7 @@
 [general]
 # Theme import from alacritty-theme collection
 import = [
-  "~/.config/alacritty/themes/themes/ayu_mirage.toml" # change theme here
+  "~/.config/alacritty/themes/themes/kanagawa_wave.toml" # change theme here
 ]
 
 # =========================
@@ -19,7 +19,7 @@ padding.y = 12
 decorations = "Full"
 
 # Optional background translucency
-opacity = 0.85
+opacity = 0.95
 
 # =========================
 # Font
