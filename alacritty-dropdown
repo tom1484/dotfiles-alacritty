@@ -14,7 +14,10 @@ WINDOW_CLASS="dropdown,dropdown"  # Window class for WM rules
 # Run tdrop with auto-hide and toggle functionality
 WAYLAND_DISPLAY= WINIT_UNIX_BACKEND=x11 tdrop -ma -A -n dropdown-term \
     -w "${WIDTH}%" -h "${HEIGHT}%" -x "${X}%" -y "${Y}%" \
-    -P 'wmctrl -i -r $wid -b add,above' \
     alacritty --class dropdown-term,dropdown-term \
     --option '' \
     -e tmux new-session -A -s default
+
+# Place the window above the current window
+# -P 'wmctrl -i -r $wid -b add,above' \
+
