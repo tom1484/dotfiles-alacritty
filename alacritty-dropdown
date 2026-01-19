@@ -2,7 +2,6 @@
 # Alacritty dropdown terminal using tdrop
 # This script creates a toggle-able dropdown terminal at the top of the screen
 
-# Configuration (adjust as needed)
 HEIGHT=80
 WIDTH=80
 
@@ -11,13 +10,8 @@ Y=$(( (100 - HEIGHT)/2 ))
 
 WINDOW_CLASS="dropdown,dropdown"  # Window class for WM rules
 
-# Run tdrop with auto-hide and toggle functionality
-WAYLAND_DISPLAY= WINIT_UNIX_BACKEND=x11 tdrop -ma -A -n dropdown-term \
+WAYLAND_DISPLAY= WINIT_UNIX_BACKEND=x11 tdrop -mta -A -n dropdown-term \
     -w "${WIDTH}%" -h "${HEIGHT}%" -x "${X}%" -y "${Y}%" \
     alacritty --class dropdown-term,dropdown-term \
     --option '' \
     -e tmux new-session -A -s default
-
-# Place the window above the current window
-# -P 'wmctrl -i -r $wid -b add,above' \
-
